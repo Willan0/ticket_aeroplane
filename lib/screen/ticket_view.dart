@@ -17,9 +17,9 @@ class TicketView extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return SizedBox(
       width: size.width*0.85,
-      height: 200,
+      height: AppLayout.getHeight(200),
       child: Container(
-        margin: const EdgeInsets.only(right: 16),
+        margin:  EdgeInsets.only(right: AppLayout.getHeight(16)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -27,11 +27,11 @@ class TicketView extends StatelessWidget {
             showing the blue part of the card/ticket
              */
             Container(
-              margin: const EdgeInsets.only(top: 16),
-              padding: const EdgeInsets.all(16),
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
-                color: Color(0xff526799),
+              margin:  EdgeInsets.only(top: AppLayout.getHeight(16)),
+              padding:  EdgeInsets.all(AppLayout.getHeight(16)),
+              decoration:  BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(AppLayout.getHeight(21)),topRight: Radius.circular(AppLayout.getHeight(21))),
+                color: const Color(0xff526799),
               ),
               child: Column(
                 children: [
@@ -45,14 +45,14 @@ class TicketView extends StatelessWidget {
                         child: Stack(
                           children:[ 
                             SizedBox(
-                            height: 20,
+                            height: AppLayout.getHeight(20),
                             child: LayoutBuilder(
                               builder: (BuildContext context, BoxConstraints constraint) {
                                 return Flex(
                                   direction: Axis.horizontal,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: List.generate((constraint.constrainWidth()/6).ceil(), (index) => const SizedBox(
-                                    width: 3,height: 1,child: DecoratedBox(decoration: BoxDecoration(
+                                  children: List.generate((constraint.constrainWidth()/6).ceil(), (index) =>  SizedBox(
+                                    width: AppLayout.getWidth(3),height: AppLayout.getHeight(1),child: const DecoratedBox(decoration: BoxDecoration(
                                     color: Colors.white
                                   ),),
                                   )),
@@ -73,7 +73,7 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(width:100,child: Text(tickets['from']['name'],style: Style.headingLineStyle4.copyWith(color: Colors.white),)),
+                      SizedBox(width:AppLayout.getWidth(100),child: Text(tickets['from']['name'],style: Style.headingLineStyle4.copyWith(color: Colors.white),)),
                       Text(tickets['flying_time'],style: Style.headingLineStyle4.copyWith(color: Colors.white),),
                       SizedBox(width:100,child: Text(tickets['to']['name'],style: Style.headingLineStyle4.copyWith(color: Colors.white),textAlign: TextAlign.end,))
                     ],
@@ -85,7 +85,7 @@ class TicketView extends StatelessWidget {
             showing the orange part of the card/ticket
              */
             Container(
-              height: 20,
+              height: AppLayout.getHeight(20),
               decoration: BoxDecoration(
                 color: Style.orangeColor,
               ),
@@ -129,9 +129,9 @@ class TicketView extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children:  [
-                      SizedBox(width:100,child: Text('Date',textAlign: TextAlign.start,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,)),
-                      SizedBox(width:100,child: Text('Departure Time',textAlign: TextAlign.start,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,)),
-                      SizedBox(width:50,child: Text('No',textAlign:TextAlign.end,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,))
+                      SizedBox(width:AppLayout.getWidth(100),child: Text('Date',textAlign: TextAlign.start,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,)),
+                      SizedBox(width:AppLayout.getWidth(100),child: Text('Departure Time',textAlign: TextAlign.start,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,)),
+                      SizedBox(width:AppLayout.getWidth(50),child: Text('No',textAlign:TextAlign.end,style:Style.headingLineStyle4.copyWith(color: Colors.white) ,))
                     ],
                   )
                 ],

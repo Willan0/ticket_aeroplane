@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket/screen/ticket_view.dart';
+import 'package:ticket/utils/app_layout.dart';
 import 'package:ticket/utils/app_style.dart';
 
 import '../utils/ticket_info.dart';
@@ -32,8 +33,8 @@ class Home extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      width: 50,
-                      height: 50,
+                      width: AppLayout.getWidth(50),
+                      height: AppLayout.getHeight(50),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: const DecorationImage(

@@ -13,7 +13,7 @@ HotelScreen(this.url,this.place,this.price,{super.key});
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: 360,
+      height:AppLayout.getHeight(360),
       margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
       padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
       decoration: BoxDecoration(
@@ -30,7 +30,7 @@ HotelScreen(this.url,this.place,this.price,{super.key});
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 180,
+            height: AppLayout.getHeight(180),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(24),
                 color: Style.primaryColor,
