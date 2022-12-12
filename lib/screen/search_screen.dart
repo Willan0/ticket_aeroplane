@@ -48,7 +48,13 @@ class Search extends StatelessWidget {
           Gap(AppLayout.getHeight(15)),
           const AppIconText(icon:Icons.flight_land_rounded ,  text: "Arrival"),
           Gap(AppLayout.getHeight(15)),
-          ElevatedButton(onPressed: (){}, child: const Text("Find Tickets"))
+          Container(
+              height: AppLayout.getHeight(60),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10)
+              ),
+              child: ElevatedButton(onPressed: (){}, child: const Text("Find Tickets"))
+          )
         ],
       ),
     );
