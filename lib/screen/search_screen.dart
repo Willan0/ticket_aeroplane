@@ -13,17 +13,16 @@ class Search extends StatelessWidget {
     return Scaffold(
       backgroundColor: Style.bgColor,
       body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20),vertical: AppLayout.getHeight(20)),
         children: [
           Gap(AppLayout.getHeight(40)),
           Container(
-            margin: EdgeInsets.only(left: AppLayout.getWidth(20)),
             child: Text('What are\n you looking for?',
               style: Style.headingLineStyle1.copyWith(fontSize: 35,color: Colors.grey.shade600),
             ),
           ),
           Gap(AppLayout.getHeight(20)),
           Container(
-            margin: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppLayout.getHeight(20)),
               color: const Color(0xfff4f6fd)
