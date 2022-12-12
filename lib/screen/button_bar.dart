@@ -2,6 +2,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket/screen/home_screen.dart';
+import 'package:ticket/screen/search_screen.dart';
 class Bar extends StatefulWidget {
   const Bar({Key? key}) : super(key: key);
 
@@ -13,7 +14,7 @@ class _BarState extends State<Bar> {
     int _pageIndex = 0;
   static final List<Widget> _pages =<Widget> [
     const Home(),
-    const Text("Search"),
+    const Search(),
     const Text("Tickets"),
     const Text("Profile"),
   ];
