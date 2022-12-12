@@ -6,8 +6,8 @@ class AppLayout{
   static getSize(BuildContext context){
     return MediaQuery.of( context).size;
   }
-  static getWidth()=>Get.width;
+  static getScreenWidth()=>Get.width;
 
-  static getHeight()=> Get.height;
+  static getScreenHeight()=> Get.height;
 
 }
