@@ -25,7 +25,7 @@ class AppIconText extends StatelessWidget {
           Gap(AppLayout.getWidth(10)),
           Icon(icon,color: const Color(0xffbfc2df),),
           Gap(AppLayout.getWidth(10)),
-          Text(text,style: Style.headingLineStyle3,)
+          Text(text,style: Style.headingLineStyle3,),
         ],
       ),
     );

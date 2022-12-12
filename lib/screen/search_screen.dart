@@ -49,12 +49,23 @@ class Search extends StatelessWidget {
           const AppIconText(icon:Icons.flight_land_rounded ,  text: "Arrival"),
           Gap(AppLayout.getHeight(15)),
           Container(
-              height: AppLayout.getHeight(60),
+              height: AppLayout.getHeight(50),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10)
+                borderRadius: BorderRadius.circular(15),
               ),
               child: ElevatedButton(onPressed: (){}, child: const Text("Find Tickets"))
-          )
+          ),
+          Gap(AppLayout.getHeight(35)),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: AppLayout.getHeight(10)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:  [
+                Text("Upcoming Flights",style: Style.headingLineStyle2,),
+                InkWell(onTap: (){},child: Text('View all',style: Style.textStyle,))
+              ],
+            ),
+          ),
         ],
       ),
     );
