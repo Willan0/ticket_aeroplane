@@ -9,5 +9,13 @@ class AppLayout{
   static getScreenWidth()=>Get.width;
 
   static getScreenHeight()=> Get.height;
+  static getWidth(double pixels){
+    double x = getScreenWidth()/pixels;
+    return getScreenWidth()/x;
+  }
+  static getHeight(double pixels){
+    double x = getScreenHeight()/pixels;
+    return getScreenHeight()/x;
+  }
 
 }
