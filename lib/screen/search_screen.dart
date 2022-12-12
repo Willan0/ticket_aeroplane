@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket/screen/search_text.dart';
 import 'package:ticket/utils/app_layout.dart';
 
 import '../utils/app_style.dart';
@@ -41,7 +42,13 @@ class Search extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          Gap(AppLayout.getHeight(25)),
+          const AppIconText(icon:Icons.flight_takeoff_rounded ,  text: "Departure"),
+          Gap(AppLayout.getHeight(15)),
+          const AppIconText(icon:Icons.flight_land_rounded ,  text: "Arrival"),
+          Gap(AppLayout.getHeight(15)),
+          ElevatedButton(onPressed: (){}, child: const Text("Find Tickets"))
         ],
       ),
     );
