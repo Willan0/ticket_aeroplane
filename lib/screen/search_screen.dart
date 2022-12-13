@@ -155,7 +155,7 @@ final size = AppLayout.getSize(context);
                                 ),
                                 TextSpan(
                                     text: '😍',
-                                    style: TextStyle(fontSize: 35)
+                                    style: TextStyle(fontSize: 50)
                                 ),
                                 TextSpan(
                                     text: '🥰',
