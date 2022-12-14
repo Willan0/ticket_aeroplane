@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../utils/app_style.dart';
 
 class HalfCircleLeft extends StatelessWidget {
-  const HalfCircleLeft({Key? key}) : super(key: key);
+  final bool ?isChecked;
+  const HalfCircleLeft({Key? key,this.isChecked=false}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class HalfCircleLeft extends StatelessWidget {
       width: 10,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: Style.bgColor,
+          color: isChecked==true?Colors.white:Style.bgColor,
            borderRadius: const BorderRadius.only(topRight: Radius.circular(10),bottomRight:Radius.circular(10))
         ),
       ),

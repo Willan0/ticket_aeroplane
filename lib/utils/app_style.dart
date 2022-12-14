@@ -11,5 +11,6 @@ class Style{
   static TextStyle headingLineStyle1 = TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: textColor);
   static TextStyle headingLineStyle2 = TextStyle(fontSize: 21,fontWeight: FontWeight.bold,color: textColor);
   static TextStyle headingLineStyle3 = TextStyle(fontSize: 17,fontWeight: FontWeight.w500,color:  Colors.grey.shade500);
+  static TextStyle headingLineStyle5 = TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color:  Colors.grey.shade500);
   static TextStyle headingLineStyle4 = TextStyle(fontSize: 12,fontWeight: FontWeight.w500,color: Colors.grey.shade500);
 }
