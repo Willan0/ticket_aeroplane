@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket/screen/ticket_view.dart';
 import 'package:ticket/utils/ticket_info.dart';
+import 'package:barcode_widget/barcode_widget.dart';
 
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
@@ -118,7 +119,7 @@ class Tickets extends StatelessWidget {
                           Text(' *** 24642',style: Style.headingLineStyle5.copyWith(color:Colors.grey.shade700),),
                         ],
                       ),
-                      Text('Payment method',style: Style.headingLineStyle4.copyWith(color: Colors.grey.shade500),)
+                      Text('Payment method  ',style: Style.headingLineStyle4.copyWith(color: Colors.grey.shade500),)
                     ],
                   ),
                   Column(
@@ -130,7 +131,30 @@ class Tickets extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            /*
+            bar code
+             */
+            Container(
+              width: size.width*0.6,
+              height: AppLayout.getHeight(100),
+              padding: EdgeInsets.all(AppLayout.getHeight(10)),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(16),bottomLeft: Radius.circular(16))
+              ),
+              child: BarcodeWidget(
+                  data: 'https://github.com/martinovovo',
+                  barcode: Barcode.code128(),
+                  color: Style.textColor,
+                  width: double.infinity,
+                  drawText: false,
+              ),
+            ),
+            Padding(
+              padding:  EdgeInsets.only(left: AppLayout.getWidth(16)),
+              child: TicketView(tickets: ticketList[0]),
+            ),
           ],
         ),
        ]
