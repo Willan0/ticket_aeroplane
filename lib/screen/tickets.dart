@@ -47,6 +47,7 @@ class Tickets extends StatelessWidget {
             ),
             Gap(AppLayout.getHeight(20)),
             TicketView(tickets: ticketList[0],isColor: true),
+            const SizedBox(height: 1,),
             Container(
               width:size.width*0.85,
               margin: EdgeInsets.only(right: AppLayout.getWidth(16)),
