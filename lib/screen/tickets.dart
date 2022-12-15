@@ -51,7 +51,7 @@ class Tickets extends StatelessWidget {
             Container(
               width:size.width*0.85,
               margin: EdgeInsets.only(right: AppLayout.getWidth(16)),
-              padding: EdgeInsets.symmetric(vertical: AppLayout.getWidth(10),horizontal: AppLayout.getHeight(10)),
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(16),horizontal: AppLayout.getWidth(10)),
               decoration: const BoxDecoration(
                 color: Colors.white
               ),
