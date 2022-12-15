@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket/screen/search_text.dart';
 import 'package:ticket/utils/app_layout.dart';
-
 import '../utils/app_style.dart';
 
 class Search extends StatelessWidget {

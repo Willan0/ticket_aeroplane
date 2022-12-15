@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket/utils/app_layout.dart';
 
 import '../utils/app_style.dart';
+import '../utils/dot_line.dart';
 import '../widgets/half_circle_left.dart';
 import '../widgets/half_circle_right.dart';
 import '../widgets/rounded_container.dart';
@@ -21,7 +22,7 @@ class TicketView extends StatelessWidget {
       width: size.width*0.85,
       height: AppLayout.getHeight(182),
       child: Container(
-        margin:  EdgeInsets.only(right: AppLayout.getHeight(16)),
+        margin:  EdgeInsets.only(right: AppLayout.getHeight(isColor==null?16:0)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -48,19 +49,7 @@ class TicketView extends StatelessWidget {
                           children:[ 
                             SizedBox(
                             height: AppLayout.getHeight(20),
-                            child: LayoutBuilder(
-                              builder: (BuildContext context, BoxConstraints constraint) {
-                                return Flex(
-                                  direction: Axis.horizontal,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: List.generate((constraint.constrainWidth()/6).ceil(), (index) =>  SizedBox(
-                                    width: AppLayout.getWidth(3),height: AppLayout.getHeight(1),child:  DecoratedBox(decoration: BoxDecoration(
-                                    color: isColor==null?Colors.white:Colors.grey.shade400
-                                  ),),
-                                  )),
-                                );
-                              },
-                            ),
+                            child: const DotLine(),
                           ),
                             Center(child:Transform.rotate(angle: 1.5,child: Icon(Icons.local_airport_rounded,color: isColor==null?Colors.white:Colors.blue,) ,) ,)
                           ],
@@ -94,19 +83,12 @@ class TicketView extends StatelessWidget {
               child:
                   Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: [
-                    const HalfCircleLeft(isChecked: true,),
+                   children: const [
+                    HalfCircleLeft(isChecked: true,),
                     Expanded(
-                      child: LayoutBuilder(builder: (BuildContext context,  BoxConstraints constraints) {
-                        return Flex(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            direction: Axis.horizontal,
-                          children: List.generate((constraints.constrainWidth()/6).floor(), (index) =>
-                              Text('-',style: TextStyle(color: isColor==null?Colors.white:Colors.grey.shade400),)),
-                        );
-                      },),
+                      child: DotLine(),
                     ),
-                    const HalfCircleRight(isChecked: true,),
+                    HalfCircleRight(isChecked: true,),
                   ]),
               ),
             /*

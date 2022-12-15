@@ -6,6 +6,7 @@ import 'package:ticket/utils/ticket_info.dart';
 
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
+import '../utils/dot_line.dart';
 
 class Tickets extends StatelessWidget {
   const Tickets({Key? key}) : super(key: key);
@@ -47,11 +48,10 @@ class Tickets extends StatelessWidget {
             ),
             Gap(AppLayout.getHeight(20)),
             TicketView(tickets: ticketList[0],isColor: true),
-            const SizedBox(height: 1,),
+            Container(width:size.width/0.85,height:AppLayout.getHeight(1),decoration:const BoxDecoration(color:Colors.white),child: const DotLine()),
             Container(
               width:size.width*0.85,
-              margin: EdgeInsets.only(right: AppLayout.getWidth(16)),
-              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(16),horizontal: AppLayout.getWidth(10)),
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(20),horizontal: AppLayout.getWidth(10)),
               decoration: const BoxDecoration(
                 color: Colors.white
               ),
@@ -76,7 +76,9 @@ class Tickets extends StatelessWidget {
                       )
                     ],
                   ),
-                  Gap(AppLayout.getHeight(30)),
+                  Gap(AppLayout.getHeight(15)),
+                  const DotLine(),
+                  Gap(AppLayout.getHeight(15)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
