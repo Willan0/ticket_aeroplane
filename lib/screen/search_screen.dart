@@ -135,6 +135,7 @@ final size = AppLayout.getSize(context);
                   Container(
                     width: size.width*0.45,
                     height: AppLayout.getHeight(210),
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
                       color: const Color(0xffec6545),
                       borderRadius: BorderRadius.circular(AppLayout.getHeight(12)),
@@ -150,15 +151,15 @@ final size = AppLayout.getSize(context);
                               children: [
                                 TextSpan(
                                   text: '😘',
-                                  style: TextStyle(fontSize: 35)
+                                  style: TextStyle(fontSize: 25)
                                 ),
                                 TextSpan(
                                     text: '😍',
-                                    style: TextStyle(fontSize: 45)
+                                    style: TextStyle(fontSize: 40)
                                 ),
                                 TextSpan(
                                     text: '🥰',
-                                    style: TextStyle(fontSize: 35)
+                                    style: TextStyle(fontSize: 25)
                                 ),
                               ]
                         ))

@@ -100,6 +100,36 @@ class Tickets extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            Container(width:size.width/0.85,height:AppLayout.getHeight(1),decoration:const BoxDecoration(color:Colors.white),child: const DotLine()),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(16),horizontal: AppLayout.getWidth(8)),
+              decoration: const BoxDecoration(
+                color: Colors.white
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children:  [
+                          Image.asset('assets/images/visa.png',scale: 11,),
+                          Text(' *** 24642',style: Style.headingLineStyle5.copyWith(color:Colors.grey.shade700),),
+                        ],
+                      ),
+                      Text('Payment method',style: Style.headingLineStyle4.copyWith(color: Colors.grey.shade500),)
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text('\$ 249.99',style: Style.headingLineStyle5.copyWith(color: Colors.grey.shade700),),
+                      Text('Price',style: Style.headingLineStyle4.copyWith(color: Colors.grey.shade500),)
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
