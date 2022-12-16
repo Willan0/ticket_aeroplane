@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket/utils/app_layout.dart';
 
 import '../utils/app_style.dart';
+import '../utils/two_column_in_one_row.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -97,7 +98,7 @@ class Profile extends StatelessWidget {
                         shape: BoxShape.circle,
                         color: Colors.white
                       ),
-                      child: const Icon(FluentSystemIcons.ic_fluent_lightbulb_circle_filled,size: 34,)
+                      child:Icon(FluentSystemIcons.ic_fluent_lightbulb_filament_filled,color: Style.primaryColor,size: 34,)
                     ),
                     Gap(AppLayout.getHeight(10)),
                     Column(
@@ -111,6 +112,33 @@ class Profile extends StatelessWidget {
                 ),
               )
             ]
+          ),
+          Gap(AppLayout.getHeight(25)),
+          Text('Accumulated miles',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Style.textColor),),
+          Gap(AppLayout.getHeight(35)),
+          Center(child: Text('192802',style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Style.textColor),)),
+          Gap(AppLayout.getHeight(35)),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(16)),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Miles accrued',style: Style.headingLineStyle5,),
+                    Text('23 May 2021',style: Style.headingLineStyle5,)
+                  ],
+                ),
+                Gap(AppLayout.getHeight(16)),
+                const TowInOne(miles: "43 021", country: "Airline CO" ,),
+                Gap(AppLayout.getHeight(16)),
+                const TowInOne(miles: "75", country: "McDonal's" ,),
+                Gap(AppLayout.getHeight(16)),
+                const TowInOne(miles: "200", country: "Exuma" ,),
+                Gap(AppLayout.getHeight(16)),
+                Text('How to get more miles',style: TextStyle(fontSize: 14,color: Style.primaryColor,fontWeight: FontWeight.w200),)
+              ],
+            ),
           )
         ],
       ),
