@@ -2,6 +2,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket/screen/home_screen.dart';
+import 'package:ticket/screen/profile_screen.dart';
 import 'package:ticket/screen/search_screen.dart';
 import 'package:ticket/screen/tickets.dart';
 class Bar extends StatefulWidget {
@@ -17,7 +18,7 @@ class _BarState extends State<Bar> {
     const Home(),
     const Search(),
     const Tickets(),
-    const Text("Profile"),
+    const Profile(),
   ];
   void _itemTap(int index){
    setState(() {
