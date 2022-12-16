@@ -8,6 +8,7 @@ import 'package:barcode_widget/barcode_widget.dart';
 import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
 import '../utils/dot_line.dart';
+import '../utils/double_circle.dart';
 
 class Tickets extends StatelessWidget {
   const Tickets({Key? key}) : super(key: key);
@@ -18,7 +19,8 @@ class Tickets extends StatelessWidget {
     return Scaffold(
       backgroundColor: Style.bgColor,
       body: Stack(
-        children: [ListView(
+        children: [
+          ListView(
           padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(20),horizontal: AppLayout.getWidth(20)),
           children: [
             Gap(AppLayout.getHeight(40)),
@@ -157,6 +159,16 @@ class Tickets extends StatelessWidget {
             ),
           ],
         ),
+          Positioned(
+            left: AppLayout.getHeight(10),
+            top: AppLayout.getHeight(254),
+            child: const DoubleCircle(),
+          ),
+          Positioned(
+            right: AppLayout.getHeight(10),
+            top: AppLayout.getHeight(254),
+            child: const DoubleCircle(),
+          )
        ]
       ),
     );
